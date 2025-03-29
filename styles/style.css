@@ -1,0 +1,70 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Enable Horizontal Scrolling */
+body {
+    overflow-x: hidden;  /* Prevent horizontal scrollbar on body */
+    overflow-y: hidden;  /* Disable vertical scrolling */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+/* Scrollable Container */
+.horizontal-scroll {
+    display: flex;
+    width: 500vw; /* Each section is 100vw, so 5 sections = 500vw */
+    height: 100vh;
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+/* Hide Scrollbar */
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar on Chrome & Safari */
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    flex-shrink: 0;  /* Prevent sections from shrinking */
+}
+
+/* Parallax Background */
+#intro {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    background: url('../assets/images/background-grassland.png') no-repeat center center;
+    background-size: cover;  /* Ensures it always covers the full width */
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ensure no extra space */
+    height: 100vh;
+    z-index: -1;
+}
+
+
+
+/* Section Background Colors */
+#about { background: #16213e; }
+#skills { background: #0f3460; }
+#projects { background: #533483; }
+#contact { background: #e94560; }
